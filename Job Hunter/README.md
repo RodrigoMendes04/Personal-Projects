@@ -92,7 +92,7 @@ You can customize the search logic by editing the lists in `main.py`:
 ```
 
 **Discord Notification:**
-*![Discord Preview](discord-not.png)`)*
+*![Discord Preview](discord-not.png)*
 
 ## 📄 License
 
