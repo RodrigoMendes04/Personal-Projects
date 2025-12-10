@@ -57,7 +57,7 @@ graph LR
 
 ```bash
 git clone [https://github.com/RodrigoMendes04/Personal-Projects.git](https://github.com/RodrigoMendes04/Personal-Projects.git)
-cd "Personal-Projects/B2B_Pipeline"
+cd "Personal-Projects/B2B Pipeline"
 ```
 
 ### 2. Set up the environment
