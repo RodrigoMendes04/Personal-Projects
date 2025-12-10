@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  # 1. Base de Dados PostgreSQL
+  db:
+    image: postgres:15-alpine
+    container_name: b2b_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: user_b2b
+      POSTGRES_PASSWORD: password_secure
+      POSTGRES_DB: b2b_leads_db
+    ports:
+      - "5432:5432"  # Porta do teu PC : Porta do Container
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Persistência (para não perderes dados se desligares)
+
+  # 2. Redis (Para gerir as filas de espera do Celery - Fase 3)
+  redis:
+    image: redis:alpine
+    container_name: b2b_redis
+    restart: always
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_data:
